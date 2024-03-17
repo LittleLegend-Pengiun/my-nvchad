@@ -11,6 +11,9 @@ M.ui = {
     separator_style = "round",
     overriden_module = nil,
   },
+  nvdash = {
+    load_on_startup = true,
+  },
 }
 
 return M

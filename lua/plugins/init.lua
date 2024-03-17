@@ -11,5 +11,5 @@ return {
     opts = {
       git = { enable = true },
     },
-  },
+  },  
 }

@@ -13,7 +13,6 @@ local options = {
 		yaml = { "prettier" },
 		markdown = { "prettier" },
 		graphql = { "prettier" },
-		go = { "prettier" },
 	},
 
 	format_on_save = {

@@ -27,7 +27,6 @@ return {
         "javascript",
         "typescript",
         "tsx",
-        "jsx",
 
        -- low level
         "go"

@@ -20,6 +20,12 @@ Install open-cli, as it needs for carbon-now, a screenshot tool.
 npm install -g open-cli
 ```
 
+Install sed, as it needs for nvim-spectre, a finding plugin.
+
+```bash
+choco install sed
+```
+
 ## Installed plugins
 
 - Base plugins of NvChad.
@@ -31,3 +37,4 @@ npm install -g open-cli
 - Screenshot tool: `carbon-now`
 - Prettier, tie with Conform
 - NeoGit
+- Nvim-spectre

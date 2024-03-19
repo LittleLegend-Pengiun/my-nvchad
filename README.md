@@ -8,11 +8,11 @@ Commandline environment: [PowerShell 7](https://learn.microsoft.com/en-us/powers
 
 Install these tools, at it needs for NvChad (look at [NvChad document](https://nvchad.com/docs/quickstart/install) for more details):
 
-- Neovim: `choco install neovim` (Windows).
+- Neovim: `choco install neovim`.
 - Nerd Font installed in the terminal. I use `MesloLMGDZ Nerd Font`.
-- GCC: `choco install gcc` (Windows).
+- GCC: `choco install gcc`.
 - Make, in Windows, it is in the `GnuWin32` package: `choco install gnuwin32-coreutils.portable`.
-- Ripgrep: `choco install ripgrep` (Windows).
+- Ripgrep: `choco install ripgrep`.
 
 Install open-cli, as it needs for carbon-now, a screenshot tool.
 

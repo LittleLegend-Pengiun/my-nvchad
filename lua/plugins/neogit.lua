@@ -11,7 +11,19 @@ local plugins = {
 			"nvim-telescope/telescope.nvim", -- optional
 			-- "ibhagwan/fzf-lua",              -- optional
 		},
-		config = true,
+		config = function()
+			local settings = require("configs.neogitconf")
+			local neogit = require("neogit")
+			neogit.setup(settings)
+
+			-- Key map for quick access
+			vim.keymap.set({ "n" }, "<leader>ng", ":Neogit <Esc>", {
+				desc = "Toggle Neogit",
+			})
+			vim.keymap.set({ "v" }, "<leader>ng", "<Esc> :Neogit <Esc>", {
+				desc = "Toggle Neogit",
+			})
+		end,
 	},
 }
 

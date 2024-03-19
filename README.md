@@ -4,7 +4,9 @@ This is my Neovim config based on the starter config of NvChad
 
 ## Prequesite
 
-Install these tools, at it needs for NvChad (look at (NvChad document)[https://nvchad.com/docs/quickstart/install] for more details):
+Commandline environment: [PowerShell 7](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows). Without Powershell, the integrated commandline in Neovim cannot be opened.
+
+Install these tools, at it needs for NvChad (look at [NvChad document](https://nvchad.com/docs/quickstart/install) for more details):
 
 - Neovim: `choco install neovim` (Windows).
 - Nerd Font installed in the terminal. I use `MesloLMGDZ Nerd Font`.

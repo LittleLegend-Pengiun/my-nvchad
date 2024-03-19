@@ -2,7 +2,7 @@
 
 This is my Neovim config based on the starter config of NvChad
 
-## Prequesite
+## Prerequisite
 
 Commandline environment: [PowerShell 7](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows). Without Powershell, the integrated commandline in Neovim cannot be opened.
 

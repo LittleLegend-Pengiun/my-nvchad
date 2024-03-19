@@ -1,4 +1,4 @@
-# NvChad Configuration
+# NvChad Configuration for Windows
 
 This is my Neovim config based on the starter config of NvChad
 
@@ -17,3 +17,15 @@ Install open-cli, as it needs for carbon-now, a screenshot tool.
 ```bash
 npm install -g open-cli
 ```
+
+## Installed plugins
+
+- Base plugins of NvChad.
+- LSP for these languages:
+  - Lua (default)
+  - Golang
+  - Typescript
+  - Javascript
+- Screenshot tool: `carbon-now`
+- Prettier, tie with Conform
+- NeoGit

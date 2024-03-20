@@ -8,7 +8,7 @@ M.ui = {
 	},
 	statusline = {
 		theme = "default",
-		separator_style = { left = "", right = "█" },
+		separator_style = { left = "█", right = "█" },
 		-- override = {
 		-- 	cursor = function()
 		-- 		return "%#StText# Ln %l, Col %c"

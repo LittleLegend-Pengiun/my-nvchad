@@ -8,13 +8,14 @@ return {
 
 			conform.setup(options)
 
+			-- Bring the keymap from mappings.lua to here
 			vim.keymap.set({ "n", "v" }, "<leader>fm", function()
 				conform.format({
 					lsp_fallback = true,
 					async = false,
 					timeout_ms = 500,
 				})
-			end, { desc = "Format file or range (in visual mode)" })
+			end, { desc = "Format file or range with Conform" })
 		end,
 	},
 

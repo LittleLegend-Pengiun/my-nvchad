@@ -11,3 +11,7 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 -- end, { desc = "File Format with conform" })
 
 map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
+
+map({ "n", "v" }, "<leader>gc", "<cmd>lua require('telescope.builtin').git_commits()<CR>", {
+	desc = "Telescope Git commits",
+})

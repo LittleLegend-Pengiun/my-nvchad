@@ -18,7 +18,7 @@ local plugins = {
 
 			-- Key map for quick access
 			vim.keymap.set({ "n", "v" }, "<leader>gn", "<Esc> :Neogit <Esc>", {
-				desc = "Open Neogit: Git dashboard",
+				desc = "Neogit Git dashboard",
 			})
 		end,
 	},

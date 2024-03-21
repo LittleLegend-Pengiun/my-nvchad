@@ -18,6 +18,7 @@ local plugin = {
 			require("barbecue").setup({
 				create_autocmd = false, -- prevent barbecue from updating itself automatically
 				attach_navic = false,
+				theme = require("configs.barbecueconf").theme,
 			})
 
 			vim.api.nvim_create_autocmd({

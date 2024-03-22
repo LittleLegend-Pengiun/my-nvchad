@@ -21,6 +21,9 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
+-- Enable cursorline becase it is disabled by default
+vim.opt.cursorlineopt = "both"
+
 local lazy_config = require("configs.lazy")
 
 -- load plugins

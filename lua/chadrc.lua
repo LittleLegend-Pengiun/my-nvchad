@@ -1,7 +1,17 @@
 local M = {}
 
+-- local hightlights = require("configs.hightlights")
+
 M.ui = {
 	theme = "chadracula",
+	hl_override = {
+		CursorLine = {
+			bg = "#333544",
+		},
+	},
+
+	transparency = false,
+
 	tabufline = {
 		--  more opts
 		order = { "treeOffset", "buffers", "tabs", "btns" },

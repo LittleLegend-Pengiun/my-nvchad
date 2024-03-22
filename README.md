@@ -39,3 +39,7 @@ choco install sed
 - NeoGit - Support create commits
 - Nvim-spectre - a tool to globaly search and replace text
 - Barbecue - a VS Code like winbar
+
+## Planned plugins
+
+- inlay-hints (Don't appear as expected, may be because of Nvim 0.9?)

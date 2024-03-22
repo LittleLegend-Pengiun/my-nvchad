@@ -1,8 +1,15 @@
 local configs = require("nvchad.configs.lspconfig")
 
--- local on_attach = configs.on_attach
+local lsp_on_attach = configs.on_attach
+
 -- Load custom on_attach function in order to run barbecue properly
-local on_attach = require("configs.barbecueconf").on_attach
+local bbc_on_attach = require("configs.barbecueconf").on_attach
+
+-- Pass all the needed on_attach function to here
+local on_attach = function(client, buffr)
+	lsp_on_attach(client, buffr)
+	bbc_on_attach(client, buffr)
+end
 local on_init = configs.on_init
 local capabilities = configs.capabilities
 

@@ -21,9 +21,6 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
--- Enable cursorline becase it is disabled by default
-vim.opt.cursorlineopt = "both"
-
 local lazy_config = require("configs.lazy")
 
 -- load plugins
@@ -55,6 +52,9 @@ vim.api.nvim_create_autocmd({ "BufAdd", "BufEnter", "tabnew" }, {
 		end, vim.t.bufs)
 	end,
 })
+
+-- Enable cursorline becase it is disabled by default
+vim.opt.cursorlineopt = "both"
 
 vim.schedule(function()
 	require("mappings")

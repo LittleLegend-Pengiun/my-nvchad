@@ -3,7 +3,7 @@ local plugin = {
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
 	},
-	event = "VeryLazy",
+	event = { "BufReadPre", "BufNewFile" },
 	config = function()
 		local spectre = require("spectre")
 		spectre.setup({

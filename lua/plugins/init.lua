@@ -1,4 +1,4 @@
-return {
+local base_plugins = {
 	{
 		"stevearc/conform.nvim",
 		event = { "BufReadPre", "BufNewFile" },
@@ -21,12 +21,15 @@ return {
 
 	{
 		"nvim-tree/nvim-tree.lua",
+		lazy = true,
+		cmd = "NvimTreeOpen",
 		opts = {
 			git = { enable = true },
 		},
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
+		event = { "BufReadPre", "BufNewFile" },
 		opts = {
 			ensure_installed = {
 				-- defaults
@@ -46,4 +49,10 @@ return {
 			},
 		},
 	},
+	{
+		"nvim-tree/nvim-web-devicons",
+		lazy = true,
+	},
 }
+
+return base_plugins

@@ -15,3 +15,8 @@ map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
 map({ "n", "v" }, "<leader>gc", "<cmd>lua require('telescope.builtin').git_commits()<CR>", {
 	desc = "Telescope Git commits",
 })
+
+-- Have to bring the keymap for neogit to here so that it can be triggered by command
+map({ "n", "v" }, "<leader>gn", "<cmd>lua require('neogit').open()<cr>", {
+	desc = "Neogit Git dashboard",
+})

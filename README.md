@@ -34,11 +34,12 @@ choco install sed
   - Golang
   - Typescript
   - Javascript
-- Screenshot tool: `carbon-now`
+- Carbon-now - a screenshot tool
 - Prettier, tie with Conform
 - NeoGit - Support create commits
 - Nvim-spectre - a tool to globaly search and replace text
 - Barbecue - a VS Code like winbar
+- Harpoon - a plugin used to mark buffer for quick navigation
 
 ## Planned plugins
 

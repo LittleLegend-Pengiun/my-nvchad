@@ -39,7 +39,8 @@ choco install sed
 - NeoGit - Support create commits
 - Nvim-spectre - a tool to globaly search and replace text
 - Barbecue - a VS Code like winbar
-- Harpoon - a plugin used to mark buffer for quick navigation
+- ~~Harpoon (disabled)~~ - a plugin used to mark buffer for quick navigation
+- Grapple - Harpoon replacement
 
 ## Planned plugins
 

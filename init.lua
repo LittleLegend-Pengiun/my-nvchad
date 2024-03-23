@@ -54,7 +54,7 @@ vim.api.nvim_create_autocmd({ "BufAdd", "BufEnter", "tabnew" }, {
 })
 
 -- Enable cursorline becase it is disabled by default
-vim.opt.cursorlineopt = "both"
+-- vim.opt.cursorlineopt = "both"
 
 vim.schedule(function()
 	require("mappings")

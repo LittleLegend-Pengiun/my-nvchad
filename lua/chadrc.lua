@@ -4,11 +4,11 @@ local M = {}
 
 M.ui = {
 	theme = "chadracula",
-	hl_override = {
-		CursorLine = {
-			bg = "#333544",
-		},
-	},
+	-- hl_override = {
+	-- 	CursorLine = {
+	-- 		bg = "#333544",
+	-- 	},
+	-- },
 
 	transparency = false,
 

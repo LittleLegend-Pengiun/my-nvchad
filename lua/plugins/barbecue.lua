@@ -1,7 +1,7 @@
 local plugin = {
 	{
 		"utilyre/barbecue.nvim",
-		event = "VeryLazy",
+		event = { "BufReadPre", "BufNewFile" },
 		name = "barbecue",
 		version = "*",
 		dependencies = {

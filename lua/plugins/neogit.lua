@@ -1,7 +1,7 @@
 local plugins = {
 	{
 		"NeogitOrg/neogit",
-		event = "VeryLazy",
+		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
 			"nvim-lua/plenary.nvim", -- required
 			"sindrets/diffview.nvim", -- optional - Diff integration

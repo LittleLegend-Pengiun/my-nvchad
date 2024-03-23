@@ -1,7 +1,6 @@
 local plugin = {
 	{
 		"utilyre/barbecue.nvim",
-		-- lazy = false,
 		event = "VeryLazy",
 		name = "barbecue",
 		version = "*",

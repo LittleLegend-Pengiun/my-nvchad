@@ -5,9 +5,24 @@ local opts = {
 }
 
 local keys = {
-	{ "<leader>a", "<cmd>Grapple toggle<cr>", desc = "Tag a file" },
-	{ "<leader>X", '<cmd>lua require("grapple").untag()<cr>', desc = "Remove tag for current buffer" },
-	{ "<leader>E", "<cmd>Grapple toggle_tags<cr>", desc = "Toggle tags menu" },
+	{
+		"<leader>a",
+		"<cmd>lua local grapple = require('grapple'); \z	
+    grapple.tag(); \z
+    grapple.toggle(); grapple.toggle(); \z
+    <cr>",
+		desc = "Tag a file and top the tag",
+	},
+	{
+		"<leader>X",
+		"<cmd>lua require('grapple').untag()<cr>",
+		desc = "Remove tag for current buffer",
+	},
+	{
+		"<leader>E",
+		"<cmd>lua require('grapple').open_tags()<cr>",
+		desc = "Toggle tags menu",
+	},
 
 	-- { "<c-h>", "<cmd>Grapple select index=1<cr>", desc = "Select first tag" },
 	-- { "<c-t>", "<cmd>Grapple select index=2<cr>", desc = "Select second tag" },
@@ -16,12 +31,28 @@ local keys = {
 
 	{
 		"<S-Tab>",
-		'<cmd>lua require("grapple").cycle_backward(); require("grapple").untag(); require("grapple").toggle()<cr>',
+		"<cmd> \z
+      lua	local grapple = require('grapple'); \z	
+      grapple.cycle_backward(); \z
+			grapple.toggle(); grapple.toggle(); \z
+      <cr>",
 		desc = "Grapple cycle to the last visit tag",
 	},
 
-	{ "<leader>Q", "<cmd>Grapple cycle backward<cr>", desc = "Grapple cycle to the previous tag" },
-	{ "<Tab>", "<cmd>Grapple cycle forward<cr>", desc = "Go to next tag" },
+	{
+		"<leader>Q",
+		"<cmd>lua require('grapple').cycle_backward()<cr>",
+		desc = "Grapple cycle to the previous tag",
+	},
+	{
+		"<Tab>",
+		"<cmd> \z
+      lua	local grapple = require('grapple'); \z	
+      grapple.cycle_forward(); \z
+			grapple.toggle(); grapple.toggle(); \z
+      <cr>",
+		desc = "Go to next tag",
+	},
 }
 
 local settings = {

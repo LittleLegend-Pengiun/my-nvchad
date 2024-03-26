@@ -19,11 +19,12 @@ M.ui = {
 	statusline = {
 		theme = "default",
 		separator_style = { left = "█", right = "" },
-		-- override = {
-		-- 	cursor = function()
-		-- 		return "%#StText# Ln %l, Col %c"
-		-- 	end,
-		-- },
+		order = { "mode", "file", "git", "%=", "lsp_msg", "%=", "diagnostics", "lsp", "cwd", "cursor" },
+		modules = {
+			cursor = function()
+				return "%#St_pos_sep#" .. "█" .. "%#St_pos_icon# %#St_Pos_text# L:%l | C:%c "
+			end,
+		},
 	},
 	nvdash = {
 		load_on_startup = true,

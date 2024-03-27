@@ -28,28 +28,6 @@ local base_plugins = {
 		},
 	},
 	{
-		"nvim-treesitter/nvim-treesitter",
-		event = { "BufReadPre", "BufNewFile" },
-		opts = {
-			ensure_installed = {
-				-- defaults
-				"vim",
-				"lua",
-				"vimdoc",
-
-				-- web dev
-				"html",
-				"css",
-				"javascript",
-				"typescript",
-				"tsx",
-
-				-- low level
-				"go",
-			},
-		},
-	},
-	{
 		"nvim-tree/nvim-web-devicons",
 		lazy = true,
 	},

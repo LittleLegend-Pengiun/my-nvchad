@@ -9,17 +9,16 @@ vim.opt.shellxquote = ""
 
 -- Add hightlight for mdx. It must be added before lsp server plugins,
 -- otherwide it will override every file to be mdx
-vim.filetype.add({
-	extension = { mdx = "mdx" },
-})
-
-vim.treesitter.language.register("mdx", "markdown")
 
 vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
 	pattern = { "*.mdx" },
 	callback = function()
-		local buf = vim.api.nvim_get_current_buf()
-		vim.api.nvim_buf_set_option(buf, "filetype", "markdown")
+		-- First option
+		-- local buf = vim.api.nvim_get_current_buf()
+		-- vim.api.nvim_buf_set_option(buf, "filetype", "markdown")
+		--
+		-- Second option
+		vim.treesitter.start(buf, "markdown")
 	end,
 })
 

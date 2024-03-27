@@ -7,6 +7,22 @@ vim.opt.shellpipe = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
 vim.opt.shellquote = ""
 vim.opt.shellxquote = ""
 
+-- Add hightlight for mdx. It must be added before lsp server plugins,
+-- otherwide it will override every file to be mdx
+vim.filetype.add({
+	extension = { mdx = "mdx" },
+})
+
+vim.treesitter.language.register("mdx", "markdown")
+
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+	pattern = { "*.mdx" },
+	callback = function()
+		local buf = vim.api.nvim_get_current_buf()
+		vim.api.nvim_buf_set_option(buf, "filetype", "markdown")
+	end,
+})
+
 -- NvChad config
 vim.g.base46_cache = vim.fn.stdpath("data") .. "/nvchad/base46/"
 vim.g.mapleader = " "
@@ -22,7 +38,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local lazy_config = require("configs.lazy")
-
 -- load plugins
 require("lazy").setup({
 	{

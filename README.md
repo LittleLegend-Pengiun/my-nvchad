@@ -16,14 +16,20 @@ Install these tools, at it needs for NvChad (look at [NvChad document](https://n
 
 Install open-cli, as it needs for carbon-now, a screenshot tool.
 
-```bash
+```pwsh
 npm install -g open-cli
 ```
 
 Install sed, as it needs for nvim-spectre, a finding plugin.
 
-```bash
+```pwsh
 choco install sed
+```
+
+Install NodeJS, as it needs for Markdown-preview. Recommend to install `nvm` first to manage NodeJS easier.
+
+```pwsh
+choco install nvm
 ```
 
 Install python 3, as it needs for neovim-remote, which is needed for inverse searching for latex viewer programs on Windows.
@@ -51,6 +57,16 @@ choco install python311
 - Gitblame - show git commit info for each line of code.
 - Markdown-preview
 - Vimtex - Latex plugin for neovim.
+
+## Supported languages
+
+- Lua (default)
+- Typescript
+- Javascript
+- Golang
+- Markdown
+- Mdx
+- Latex
 
 ## Planned plugins
 

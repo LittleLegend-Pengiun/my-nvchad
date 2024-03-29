@@ -35,5 +35,6 @@
   "stcursorword": { "branch": "main", "commit": "aedd22aa6070b7e2467972276150596a7fba396c" },
   "telescope.nvim": { "branch": "master", "commit": "c2b8311dfacd08b3056b8f0249025d633a4e71a8" },
   "ui": { "branch": "v2.5", "commit": "2b5e1a0686a2b6652c3ce12f2d8667752ae81b39" },
+  "vimtex": { "branch": "master", "commit": "fb7809fd3fd8182f627acf5958acc33f22d2a126" },
   "which-key.nvim": { "branch": "main", "commit": "4433e5ec9a507e5097571ed55c02ea9658fb268a" }
 }

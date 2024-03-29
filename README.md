@@ -41,7 +41,16 @@ choco install sed
 - Barbecue - a VS Code like winbar
 - ~~Harpoon (disabled)~~ - a plugin used to mark buffer for quick navigation
 - Grapple - Harpoon replacement
+- stcursorword - Highlight the word that cursor is currently stay in.
+- Gitblame - show git commit info for each line of code.
+- Markdown-preview
+- Vimtex - Latex plugin for neovim.
 
 ## Planned plugins
 
 - inlay-hints (Don't appear as expected, may be because of Nvim 0.9?)
+
+## Post setup for vimtex
+
+- Tex live: Latex compiler, remember to install texlive with medium package, and then customize it: remove unneeded language pack, tick on additional package, otherwise it cannot compile with some package properly.
+- SumatraPDF: Good integration tool to view latex pdf on Windows. Install by using choco: `choco install sumatrapdf.install`

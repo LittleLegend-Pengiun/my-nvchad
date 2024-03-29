@@ -26,6 +26,12 @@ Install sed, as it needs for nvim-spectre, a finding plugin.
 choco install sed
 ```
 
+Install python 3, as it needs for neovim-remote, which is needed for inverse searching for latex viewer programs on Windows.
+
+```
+choco install python311
+```
+
 ## Installed plugins
 
 - Base plugins of NvChad.
@@ -53,4 +59,10 @@ choco install sed
 ## Post setup for vimtex
 
 - Tex live: Latex compiler, remember to install texlive with medium package, and then customize it: remove unneeded language pack, tick on additional package, otherwise it cannot compile with some package properly.
-- SumatraPDF: Good integration tool to view latex pdf on Windows. Install by using choco: `choco install sumatrapdf.install`
+- SumatraPDF: Good integration tool to view latex pdf on Windows. Install by using choco: `choco install sumatrapdf.install`. After the installation finished, add the path of SumatraPDF to Windows environment variables.
+- Add the inverse search functionality: (base on [this guide](https://github.com/lervag/vimtex/issues/1964#issuecomment-782597921))
+  - Install `neovim-remote`: `pip install neovim-remote`
+  - Open SumatraPDF, `Settings` &rarr; `Options`. Looking for `Set inverse search commandline` at the bottom of the menu, copy the following command:
+  ```pwsh
+  cmd /c for /F %i in ('type C:\Users\LHTL\AppData\Local\Temp\curnvimserver.txt') do nvr --servername %i -c "normal! zzzv" +"%l" "%f"
+  ```

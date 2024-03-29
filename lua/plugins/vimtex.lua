@@ -29,7 +29,25 @@ local plugin = {
 			-- " see ":help vimtex-compiler".
 			vim.g.vimtex_compiler_method = "latexmk"
 			-- -synctex=1 -interaction=nonstopmode -file-line-error -pdf -outdir=%OUTDIR% %DOC%"
+			--
+			-- Script to inverse search from SumatraPDF
+			function SetServerName()
+				local nvim_server_file
+				if vim.fn.has("win32") == 1 then
+					nvim_server_file = os.getenv("TEMP") .. "/curnvimserver.txt"
+				else
+					nvim_server_file = "/tmp/curnvimserver.txt"
+				end
+				local cmd = string.format("echo %s > %s", vim.v.servername, nvim_server_file)
+				os.execute(cmd)
+			end
 
+			vim.cmd([[
+        augroup vimtex_common
+          autocmd!
+          autocmd FileType tex lua SetServerName()
+        augroup END
+      ]])
 			-- " Most VimTeX mappings rely on localleader and this can be changed with the
 			-- " following line. The default is usually fine and is the symbol "\".
 			-- vim.g.maplocalleader = ","

@@ -11,10 +11,7 @@ M.ui = {
 
 	transparency = false,
 
-	tabufline = {
-		--  more opts
-		order = { "treeOffset", "buffers", "tabs", "btns" },
-	},
+	tabufline = {},
 
 	statusline = require("configs.stlineconf"),
 	nvdash = {
@@ -24,7 +21,6 @@ M.ui = {
 			{ "󰙅  Open Nvim Tree", "Spc e", "NvimTreeOpen" },
 			{ "󰈚  Recent Files", "Spc f o", "Telescope oldfiles" },
 			{ "󰈭  Find Word", "Spc f w", "Telescope live_grep" },
-			{ "  View Bookmarks", "Spc m a", "Telescope marks" },
 			{ "  Change Themes", "Spc t h", "Telescope themes" },
 			{ "  View Key Maps", "Spc c h", "NvCheatsheet" },
 		},

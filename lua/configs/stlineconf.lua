@@ -21,13 +21,13 @@ end
 -- 			return "%#St_pos_sep#" .. custom_sep_style.left .. "%#St_pos_icon# %#St_Pos_text# L:%l | C:%c "
 -- 		end,
 -- 	},
--- }
+-- } "󰈚"
 
 -- config for minimal
 local st_line = {
 	theme = "minimal",
 	separator_style = "round",
-	order = { "mode", "file", "git", "%=", "lsp_msg", "%=", "diagnostics", "lsp", "cursor", "cwd" },
+	order = { "mode", "cwd", "git", "%=", "lsp_msg", "%=", "diagnostics", "lsp", "cursor", "file" },
 	modules = {
 		cursor = override_cursor,
 	},

@@ -11,7 +11,7 @@ M.ui = {
 
 	transparency = false,
 
-	tabufline = {},
+	tabufline = require("configs.tabuflineconf"),
 
 	statusline = require("configs.stlineconf"),
 	nvdash = {

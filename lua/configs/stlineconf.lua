@@ -14,6 +14,7 @@
 -- }
 
 -- Use this for minimal style
+-- Helper functions
 local sep_l = ""
 local sep_r = "%#St_sep_r#" .. "" .. " %#ST_EmptySpace#"
 local function gen_block(icon, txt, sep_l_hlgroup, iconHl_group, txt_hl_group)
@@ -22,6 +23,14 @@ end
 
 local stbufnr = function()
 	return vim.api.nvim_win_get_buf(vim.g.statusline_winid or 0)
+end
+
+local function trimString(input, max_length)
+	if #input > max_length then
+		return string.sub(input, 1, max_length - 3) .. "..."
+	else
+		return input
+	end
 end
 
 local git = function()
@@ -36,10 +45,11 @@ local git = function()
 	local removed = (git_status.removed and git_status.removed ~= 0) and ("  " .. git_status.removed) or ""
 	local file_status = added .. changed .. removed
 
-	return { git_status.head, file_status }
+	return { trimString(git_status.head, 25), file_status }
 	-- return " " .. branch_name .. added .. changed .. removed
 end
 
+-- Override functions
 local git_branch = function()
 	local branch_name = git()[1]
 	if branch_name == "unknown" then

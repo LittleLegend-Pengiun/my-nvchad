@@ -18,6 +18,9 @@ local plugin = {
 
 				-- low level
 				"go",
+
+				"regex",
+				"bash",
 			},
 		},
 	},

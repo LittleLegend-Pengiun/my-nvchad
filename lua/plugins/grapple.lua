@@ -8,7 +8,8 @@ local plugin = {
 	opts = config.opts,
 	keys = config.keys,
 	config = function()
-		require("grapple").setup(config.settings)
+		local grapple = require("grapple")
+		grapple.setup(config.settings)
 	end,
 }
 

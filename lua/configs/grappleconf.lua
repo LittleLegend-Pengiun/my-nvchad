@@ -29,30 +29,30 @@ local keys = {
 	-- { "<c-n>", "<cmd>Grapple select index=3<cr>", desc = "Select third tag" },
 	-- { "<c-s>", "<cmd>Grapple select index=4<cr>", desc = "Select fourth tag" },
 
-	{
-		"<S-Tab>",
-		"<cmd> \z
-      lua	local grapple = require('grapple'); \z	
-      grapple.cycle_backward(); \z
-			grapple.toggle(); grapple.toggle(); \z
-      <cr>",
-		desc = "Grapple cycle to the last visit tag",
-	},
+	-- {
+	-- 	"<S-TAB>",
+	-- 	"<cmd> \z
+	--      lua	local grapple = require('grapple'); \z
+	--      grapple.cycle_backward(); \z
+	-- 		grapple.toggle(); grapple.toggle(); \z
+	--      <cr>",
+	-- 	desc = "Grapple cycle to the last visit tag",
+	-- },
 
 	{
 		"<leader>Q",
 		"<cmd>lua require('grapple').cycle_backward()<cr>",
 		desc = "Grapple cycle to the previous tag",
 	},
-	{
-		"<Tab>",
-		"<cmd> \z
-      lua	local grapple = require('grapple'); \z	
-      grapple.cycle_forward(); \z
-			grapple.toggle(); grapple.toggle(); \z
-      <cr>",
-		desc = "Go to next tag",
-	},
+	-- {
+	-- 	"<Tab>",
+	-- 	"<cmd> \z
+	--      lua	local grapple = require('grapple'); \z
+	--      grapple.cycle_forward(); \z
+	-- 		grapple.toggle(); grapple.toggle(); \z
+	--      <cr>",
+	-- 	desc = "Go to next tag",
+	-- },
 }
 
 local settings = {

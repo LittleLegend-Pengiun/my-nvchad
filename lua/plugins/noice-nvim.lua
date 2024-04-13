@@ -6,6 +6,10 @@ local plugin = {
 		opts = {
 			-- add any options here
 		},
+		config = function()
+			local setup = require("configs.noiceconf").setup
+			require("noice").setup(setup)
+		end,
 		dependencies = {
 			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
 			"MunifTanjim/nui.nvim",
